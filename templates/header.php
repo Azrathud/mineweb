@@ -14,18 +14,14 @@
         <div id="wrapper">
             <nav>
             </nav>
-            <section id="news-wrapper">
-                <div id="news">
-                </div>
-                <div id="more-link">
-                </div>
-            </section>
-            <section id="sidebar">
-                    <p id="status-header">Server Status</p>
-                    <p id="status">&#060;dynamic-status-here&#062;</p>
-
-                </div>
-            </section>
-        </div>
-    </body>
-</html>
+            <section id="main-wrapper">
+            <h1><?php
+                if(!isset($HEADER))
+                { 
+                    $HEADER="";
+                }
+                echo $HEADER;
+                ?>
+            </h1>
+                <div id="main-body">
+                    <div class="content">

@@ -1,0 +1,55 @@
+@font-face {
+    font-family: Terminus;
+    src: url("fonts/Terminus.ttf");
+}
+body 
+{
+    background: grey;
+    font-family: Terminus;
+}
+
+div#wrapper
+{
+    background-color:#;
+    color: white;
+    overflow: auto;
+    position: relative;
+    width: 75em;
+}
+
+#wrapper *
+{
+    background-color:#0c0c0c;
+}
+
+header
+{
+
+}
+
+nav
+{
+    float: left;
+    list-style-type: circle;
+}
+nav li
+{
+}
+nav li a
+{
+    text-decoration: none;
+}
+
+section#main-wrapper
+{
+    float: left;
+    width: auto;
+    margin: 1% 0% 1% 1%;
+    clear: left;
+}
+
+section#sidebar
+{
+    float: right;
+    width: 25em 
+}
