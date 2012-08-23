@@ -1,55 +1,136 @@
+h1
+{
+    font-size: 165%;
+}
+
+h2
+{
+    font-size: 143%;
+    display: block;
+   margin: 0px; 
+}
+
 @font-face {
     font-family: Terminus;
     src: url("fonts/Terminus.ttf");
 }
 body 
 {
-    background: grey;
     font-family: Terminus;
+    font-size: 110%;
+
+    background: #121212; /* Old browsers */
+    background: -moz-linear-gradient(top,  #121212 0%, #101010 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#121212), color-stop(100%,#101010)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #121212 0%,#101010 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #121212 0%,#101010 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #121212 0%,#101010 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #121212 0%,#101010 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121212', endColorstr='#101010',GradientType=0 ); /* IE6-9 */
 }
 
 div#wrapper
 {
-    background-color:#;
     color: white;
-    overflow: auto;
     position: relative;
-    width: 75em;
+    width: 64em;
+    margin: auto
 }
 
 #wrapper *
 {
-    background-color:#0c0c0c;
+    margin: 5px;
 }
 
-header
+#left-wrapper
 {
-
+    margin-top: 0px;
 }
 
-nav
+#left-wrapper *
 {
-    float: left;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#header
+{
+    background-color:#014051;
+    width: 28em;
+}
+
+#nav 
+{
+    padding: 5px 10px;
+    margin-right: 0;
+    background-color:#014051;
+    border: 1px solid #104b58;
+    overflow: hidden; /* stops the div from collapsing due to floats */
+}
+
+#nav ul
+{
+    padding: 0px;
+    margin: 0px;
     list-style-type: circle;
 }
-nav li
+
+#nav li
 {
+    margin: 0px;
+    float: left;
+    margin-right: 1em;
+    margin-left: 1em;
 }
-nav li a
+#nav li:first-child
 {
+    margin-left: 1em;
+}
+
+#nav a
+{
+    color: white;
     text-decoration: none;
+}
+
+#nav a:hover
+{
+    color: grey;
 }
 
 section#main-wrapper
 {
-    float: left;
     width: auto;
-    margin: 1% 0% 1% 1%;
     clear: left;
+    min-height: 600px;
+    margin-top: 10px;
+    padding-left: 10px;
+    background-color:#014051;
+    border: 1px solid #104b58;
 }
 
-section#sidebar
+#left-wrapper
 {
+    float: left;
+    clear: none;
+    margin-right: 0px;
+    width: 37em;
+}
+
+div#sidebar
+{
+    border: 1px solid #104b58;
+    background-color:#014051;
     float: right;
     width: 25em 
+}
+
+div#sidebar div
+{
+    margin-bottom: 10px;
+}
+
+.content
+{
+    padding-left: 15px;
 }
