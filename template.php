@@ -19,7 +19,7 @@ class Template {
 
         date_default_timezone_set("America/Denver");
         # Change this when migrating server
-        $this->root_dir = "/dev/mineweb/";
+        $this->root_dir = "/";
 
         $this->title="Azrathud Minecraft Server";
         $this->content="";
