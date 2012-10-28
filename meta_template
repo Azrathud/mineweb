@@ -1,0 +1,11 @@
+<?php
+
+require_once('template.php');
+
+$template = new Template();
+
+$template->content = <<<EOT
+EOT;
+
+
+$template->output();
