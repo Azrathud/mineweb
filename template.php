@@ -37,7 +37,7 @@ class Template {
             "About" => "about.php", 
             "Screenshots" => "screenshots.php",
             // "Dymap" => "server.azrathud.com:8123", 
-            "Forums" => "forums.php", 
+            "Forums" => "forums/", 
             // "Donate" => "donate.php"
             "Contact" => "contact.php", 
         );
