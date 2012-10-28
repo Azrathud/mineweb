@@ -1,0 +1,35 @@
+/ban [player] (message)
+/unban [player]
+/kick [player] (message)
+
+/co rollback <parameters> -- rollback block edits based on parameters
+    + <parameters> are separated by a single space
+	+ u -- only rolls back edits pertaining to a certain user
+	    - u:#creeper
+	    - u:azrathud
+	    - u:#fire
+	+ r -- only roll back within a certain radius
+	    + r:30
+		- rollback edits within a radius of 30 blocks 
+	+ t -- the specified time range from present to past
+	    + t:50m
+		- 50 minutes
+	    + t:30d
+		- 30 days
+	    + Time is the only required parameter
+
+	+ Examples
+	    + /co rollback u:azrathud t:5m
+		- rollback all edits done by azrathud in the last 5 minutes
+	    + /co rollback u:#fire t:31h r:30
+		- rollback all the destruction by fire in the last 31 hours in a 30 block radius
+	    + /co rollback u:andy_kovac t:30d
+		- erase the presence of andy_kovac (assuming that andy_kovac started before 30days)
+
+/co restore <parameters> -- restores any rollbacks based on parameters
+    - uses the same parameters as rollback
+/co inspect
+    + toggles inspection on and off
+	- right click tests top of block for removal
+	- left click tests block for placement
+    - you will use this tool to figure out the requried parameters for restore and rollback

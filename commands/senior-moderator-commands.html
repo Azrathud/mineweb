@@ -1,0 +1,76 @@
+<h4>/ban <code>&lt;player&gt;</code> [message]</h4>
+
+<p><br /></p>
+
+<h4>/unban <code>&lt;player&gt;</code></h4>
+
+<p><br /></p>
+
+<h4>/kick <code>&lt;player&gt;</code> [message]</h4>
+
+<p><br /></p>
+
+<h4>/co rollback <code>&lt;parameters&gt;</code> -- rollback block edits based on parameters</h4>
+
+<ul>
+<li><code>&lt;parameters&gt;</code> are separated by a single space
+<ul>
+<li>u -- only rolls back edits pertaining to a certain user
+<ul>
+<li>u:#creeper</li>
+<li>u:azrathud</li>
+<li>u:#fire</li>
+</ul></li>
+<li>r -- only roll back within a certain radius</li>
+<li>r:30
+<ul>
+<li>rollback edits within a radius of 30 blocks </li>
+</ul></li>
+<li>t -- the specified time range from present to past</li>
+<li>t:50m
+<ul>
+<li>50 minutes</li>
+</ul></li>
+<li>t:30d
+<ul>
+<li>30 days</li>
+</ul></li>
+<li>Time is the only required parameter</li>
+<li>Examples
+<ul>
+<li><code>/co rollback u:azrathud t:5m</code>
+<ul>
+<li>rollback all edits done by azrathud in the last 5 minutes</li>
+</ul></li>
+<li><code>/co rollback u:#fire t:31h r:30</code>
+<ul>
+<li>rollback all the destruction by fire in the last 31 hours in a 30 block radius</li>
+</ul></li>
+<li><code>/co rollback u:andy_kovac t:30d</code>
+<ul>
+<li>erase the presence of andy_kovac (assuming that andy_kovac started before 30days)</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+
+<p><br /></p>
+
+<h4>/co restore <code>&lt;parameters&gt;</code> -- restores any rollbacks based on parameters</h4>
+
+<ul>
+<li>uses the same parameters as rollback</li>
+</ul>
+
+<p><br /></p>
+
+<h4>/co inspect</h4>
+
+<ul>
+<li>toggles inspection on and off
+<ul>
+<li>right click tests top of block for removal</li>
+<li>left click tests block for placement</li>
+<li>you will use this tool to figure out the requried parameters for restore and rollback</li>
+</ul></li>
+</ul>
