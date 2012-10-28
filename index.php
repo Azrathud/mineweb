@@ -1,5 +1,4 @@
 <?php
-date_default_timezone_set("America/Denver");
 
 require_once('template.php');
 

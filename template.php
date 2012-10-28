@@ -10,6 +10,7 @@ class Template {
     var $sidebar;
 
     function __construct(){
+        date_default_timezone_set("America/Denver");
         # Change this when migrating server
         $this->root_dir = "/dev/mineweb/";
 
