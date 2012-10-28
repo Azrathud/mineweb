@@ -19,18 +19,22 @@ while ($file = readdir($dir_handle))
         continue;
     } else
     {
+        # Sort files based on last modified
         $files[filemtime("$base_dir$file")] = $file;
     }
 }
 closedir($dir_handle);
 
+# Newest files first
 rsort($files);
 
+# Output file name as header, last modified and then the contents
 foreach($files as $file) {
     $last_modified_raw = filemtime("$base_dir$file");
     $last_modified = date("M j, y", $last_modified_raw);
     $content = file_get_contents("$base_dir$file");
-    $posts.="<h2>$file - $last_modified </h2> $content";
+    $post_name = str_replace("-", " ", $file);
+    $posts.="<h2>$post_name - $last_modified </h2> $content";
 }
 
 $template->content = <<<EOT
