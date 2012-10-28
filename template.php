@@ -1,3 +1,4 @@
+<?php
 <!doctype html>
 <html>
     <head>
@@ -34,21 +35,7 @@
                     <h1>Updates</h1>
                     <div id="main-body">
                         <div class="content">
-                            <h2>Doth nunc duis</h2>
-                             <p>
-                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc a tincidunt erat. Curabitur lacinia leo eget nisi porttitor vulputate. Maecenas odio arcu, auctor consequat adipiscing ut, dignissim at dolor. Phasellus tortor purus, pretium sit amet mollis vitae, lacinia at sapien. Duis luctus mauris quis enim dignissim sed suscipit justo fermentum. Integer id magna gravida turpis consectetur scelerisque. Vivamus at neque quam, vitae placerat nibh. Nunc convallis gravida vehicula.
-                             </p>
-
-                             <h2>Laoreet eget nulla</h2>
-                             <p>
-                                 Donec egestas fringilla vulputate. Integer eget elementum nibh. Nam sed ipsum felis. Donec porta magna eget mi sagittis ut porttitor ante tincidunt. Vivamus pulvinar commodo vehicula. Curabitur porttitor sapien ipsum, sit amet congue sapien. Donec facilisis ipsum et felis commodo et rutrum erat dignissim. Suspendisse volutpat adipiscing ullamcorper. Etiam eget nulla est, non dictum augue. Mauris ligula odio, blandit ac imperdiet sit amet, posuere in lacus. Proin adipiscing erat at massa porta vel lacinia nulla imperdiet. Curabitur accumsan laoreet iaculis. Maecenas scelerisque condimentum magna, at sodales urna fermentum sit amet. Etiam metus nibh, iaculis sed egestas bibendum, varius vel arcu.
-                             </p>
-
-                             <h2>Name at sed</h2>
-                     <p>
-                         Fusce nunc lorem, malesuada id condimentum vel, dictum non dui. Suspendisse sit amet lacus ac nibh facilisis eleifend nec quis erat. Mauris at leo ante, at semper tortor. Duis enim est, ornare non laoreet eget, iaculis at quam. Aliquam in quam nec urna laoreet dictum. Aenean et tortor dictum velit consectetur dapibus. Nam fringilla, leo ac tincidunt viverra, dolor dolor egestas quam, sit amet pellentesque magna mi ac nisi. 
-                     </p>
-                    </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -70,3 +57,4 @@
     <script type="text/javascript" src="template.js"></script>
     </body>
 </html>
+?>

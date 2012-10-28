@@ -1,23 +1,32 @@
+@font-face {
+    font-family: Terminus;
+    src: url("fonts/Terminus.woff") format('woff'), /* modern browsers */
+         url("fonts/Terminus.ttf") format('truetype') /* Safari, Android, iOS */;
+}
+
 h1
 {
-    font-size: 165%;
+    font-size: 147%;
+    margin: 0;
 }
 
 h2
 {
-    font-size: 143%;
-    display: block;
-   margin: 0px; 
+    margin: 0;
+    font-size: 111%;
+    position: relative;
+    top: 5px; /* Changing the margins isn't working */
 }
 
-@font-face {
-    font-family: Terminus;
-    src: url("fonts/Terminus.ttf");
+p
+{
+    margin: 3px 0 3px 0;
 }
+
 body 
 {
     font-family: Terminus;
-    font-size: 110%;
+    font-size: 103%;
 
     background: #121212; /* Old browsers */
     background: -moz-linear-gradient(top,  #121212 0%, #101010 100%); /* FF3.6+ */
@@ -29,18 +38,27 @@ body
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#121212', endColorstr='#101010',GradientType=0 ); /* IE6-9 */
 }
 
+a
+{
+    outline: 0;
+}
+
 div#wrapper
 {
     color: white;
     position: relative;
+    overflow:hidden;
     width: 64em;
     margin: auto
 }
 
-#wrapper *
+.box 
 {
-    margin: 5px;
+    background: url('images/gradient.png') top left repeat-x #014051;
+    padding-left: 5px;
+    border: 1px solid #104b58;
 }
+
 
 #left-wrapper
 {
@@ -53,19 +71,39 @@ div#wrapper
     margin-left: 0px;
 }
 
-#header
+#logo
 {
-    background-color:#014051;
-    width: 28em;
+    margin: 0 0 -4px -1px;
+    font-size: 195%;
+}
+
+#logo a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.orange
+{
+    color: #824200    
+}
+
+#logo img
+{
+    border: none; /* IE 9 gives a border */
+    position: relative;
+    left: 8px;
+    bottom: -1px;
 }
 
 #nav 
 {
-    padding: 5px 10px;
     margin-right: 0;
-    background-color:#014051;
-    border: 1px solid #104b58;
+    margin-top: 0;
     overflow: hidden; /* stops the div from collapsing due to floats */
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
 }
 
 #nav ul
@@ -82,10 +120,13 @@ div#wrapper
     margin-right: 1em;
     margin-left: 1em;
 }
-#nav li:first-child
+
+#nav span
 {
-    margin-left: 1em;
+    position: relative;
+    left: -3px;
 }
+
 
 #nav a
 {
@@ -98,18 +139,16 @@ div#wrapper
     color: grey;
 }
 
-section#main-wrapper
+section#body
 {
     width: auto;
     clear: left;
     min-height: 600px;
     margin-top: 10px;
-    padding-left: 10px;
-    background-color:#014051;
-    border: 1px solid #104b58;
+    margin-right: 0;
 }
 
-#left-wrapper
+#left-sub-wrapper
 {
     float: left;
     clear: none;
@@ -119,9 +158,8 @@ section#main-wrapper
 
 div#sidebar
 {
-    border: 1px solid #104b58;
-    background-color:#014051;
     float: right;
+    margin-top: 0;
     width: 25em 
 }
 
