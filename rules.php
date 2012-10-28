@@ -7,6 +7,10 @@ $sidebar = new Sidebar($server_status = true);
 $template = new Template($sidebar);
 
 $template->content = <<<EOT
+<h1>Rules</h1>
+<div class="content">
+    <p>Please don't grief. Killing is fine in cases of conflict but pointless repeated killing or destruction of property is considering griefing.</p>
+</div>
 EOT;
 
 

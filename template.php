@@ -1,4 +1,5 @@
 <?php
+require_once('sidebar.php');
 class Template {
         
     private $links;
@@ -8,8 +9,14 @@ class Template {
     var $content;
     var $title;
     var $sidebar;
+    var $sidebar_output;
 
-    function __construct(){
+    function __construct($sidebar){
+
+        # Template supplied sidebar
+        $this->sidebar = $sidebar;
+        $this->sidebar_output = $this->sidebar->output();
+
         date_default_timezone_set("America/Denver");
         # Change this when migrating server
         $this->root_dir = "/dev/mineweb/";
@@ -29,9 +36,10 @@ class Template {
             "Command List" => "command-list.php", 
             "About" => "about.php", 
             "Screenshots" => "screenshots.php",
-            "Dymap" => "server.azrathud.com:8123", 
+            // "Dymap" => "server.azrathud.com:8123", 
             "Forums" => "forums.php", 
-            "Donate" => "donate.php"
+            // "Donate" => "donate.php"
+            "Contact" => "contact.php", 
         );
 
         # Grab the filename this file is being run from
@@ -41,7 +49,7 @@ class Template {
 
         # Create links. Add current link indicator
         $this->links = "";
-        $span_class = "";
+        $link_id = "";
         foreach($links as $key => $link) {
             if( $link == $this->current_file) {
                 $link_id = "id=\"current\"";
@@ -54,25 +62,6 @@ class Template {
             $link_id = "";
 
         }
-//         $this->links = <<<EOT
-//                     <li><a href="index.php"><span>Home</span></a></li>
-//                     <li><a href="how-to-join.php"><span>How to Join</span></a></li>
-//                     <li><a href="rules.php"><span>Rules</span></a></li>
-//                     <li><a href="plugins.php"><span>Plugins</span></a>
-//                     <li><a href="command-list.php"><span>Command List</span></a></li>
-//                     <li><a href="about.php"><span>About</span></a></li>
-//                     <li><a href="screenshots.php"><span>Screenshots</span></a></li>
-//                     <li><a href="server.azrathud.com:8123"><span>Live Map</span></a></li>
-//                     <li><a href="forum.php"><span>Forum</span></a></li>
-//                     <li><a href="donate.php"><span>Donate</span></a></li>
-//                     <li><a href="staff.php"><span>Staff</span></a></li>
-//                     <li><a href="contact.php"><span>Contact</span></a></li>
-// EOT;
-
-        // $to_replace= "/" . $this->current_file . "\"" . "/";
-        // $replacement= "" . $this->current_file . "\"" . " class=\"orange\"" . "";
-        // $this->links = preg_replace( $to_replace, $replacement, $this->links); 
-        // $this->links = preg_replace( $to_replace, $replacement, $this->links); 
     }
 
     function output() {
@@ -105,7 +94,7 @@ $this->content
                 </section>
             </div>
             <div id="sidebar" class="box">
-$this->sidebar
+$this->sidebar_output
         </div>
     </body>
 </html>
