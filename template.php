@@ -1,8 +1,85 @@
 <?php
+class Template {
+        
+    private $links;
+    private $body;
+    private $current_file;
+    private $root_dir;
+    var $content;
+    var $title;
+    var $sidebar;
+
+    function __construct(){
+        # Change this when migrating server
+        $this->root_dir = "/dev/mineweb/";
+
+        $this->title="Azrathud Minecraft Server";
+        $this->content="";
+        $this->sidebar="";
+        # Highlight active page
+
+
+        # link name => href
+        $links = array( 
+            "Home" =>"index.php", 
+            "How to Join" => "how-to-join.php", 
+            "Rules" => "rules.php", 
+            "Plugins" => "plugins.php", 
+            "Command List" => "command-list.php", 
+            "About" => "about.php", 
+            "Screenshots" => "screenshots.php",
+            "Dymap" => "server.azrathud.com:8123", 
+            "Forums" => "forums.php", 
+            "Donate" => "donate.php"
+        );
+
+        # Grab the filename this file is being run from
+        $current_file= $_SERVER["PHP_SELF"];
+        $parts = Explode('/', $current_file);
+        $this->current_file = $parts[count($parts) -1];
+
+        # Create links. Add current link indicator
+        $this->links = "";
+        $span_class = "";
+        foreach($links as $key => $link) {
+            if( $link == $this->current_file) {
+                $link_id = "id=\"current\"";
+            }
+            $this->links .= "<li><a " . $link_id . " href=\"" . $this->root_dir . $link .
+                "\"" . 
+                "><span>" . $key . " </span></a></li>\n";
+
+            # Reset
+            $link_id = "";
+
+        }
+//         $this->links = <<<EOT
+//                     <li><a href="index.php"><span>Home</span></a></li>
+//                     <li><a href="how-to-join.php"><span>How to Join</span></a></li>
+//                     <li><a href="rules.php"><span>Rules</span></a></li>
+//                     <li><a href="plugins.php"><span>Plugins</span></a>
+//                     <li><a href="command-list.php"><span>Command List</span></a></li>
+//                     <li><a href="about.php"><span>About</span></a></li>
+//                     <li><a href="screenshots.php"><span>Screenshots</span></a></li>
+//                     <li><a href="server.azrathud.com:8123"><span>Live Map</span></a></li>
+//                     <li><a href="forum.php"><span>Forum</span></a></li>
+//                     <li><a href="donate.php"><span>Donate</span></a></li>
+//                     <li><a href="staff.php"><span>Staff</span></a></li>
+//                     <li><a href="contact.php"><span>Contact</span></a></li>
+// EOT;
+
+        // $to_replace= "/" . $this->current_file . "\"" . "/";
+        // $replacement= "" . $this->current_file . "\"" . " class=\"orange\"" . "";
+        // $this->links = preg_replace( $to_replace, $replacement, $this->links); 
+        // $this->links = preg_replace( $to_replace, $replacement, $this->links); 
+    }
+
+    function output() {
+        $this->body = <<<EOT
 <!doctype html>
 <html>
     <head>
-        <title>Azrathud Minecraft Server</title>
+        <title>$this->title</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
@@ -17,44 +94,21 @@
             <div id="left-sub-wrapper">
                 <div id="nav" class="box" >
                     <ul>
-                        <li><a href="index.php"><span>Home</span></a></li>
-                        <li><a href="how-to-join.php"><span>How to Join</span></a></li>
-                        <li><a href="rules.php"><span>Rules</span></a></li>
-                        <li><a href="plugins.php"><span>Plugins</span></a>
-                        <li><a href="command-list.php"><span>Command List</span></a></li>
-                        <li><a href="about.php"><span>About</span></a></li>
-                        <li><a href="screenshots.php"><span>Screenshots</span></a></li>
-                        <li><a href="server.azrathud.com:8123"><span>Live Map</span></a></li>
-                        <li><a href="forum.php"><span>Forum</span></a></li>
-                        <li><a href="donate.php"><span>Donate</span></a></li>
-                        <li><a href="staff.php"><span>Staff</span></a></li>
-                        <li><a href="contact.php"><span>Contact</span></a></li>
+$this->links
                     </ul>
                 </div>
                 <section id="body" class="box">
-                    <h1>Updates</h1>
                     <div id="main-body">
-                        <div class="content">
-                        </div>
+$this->content
                     </div>
                 </section>
             </div>
             <div id="sidebar" class="box">
-                    <div id="status">
-                        <h1>Server Status</h1>
-                        <div class="content">&#060;dynamic-status-here&#062;</div>
-                    </div>
-                    <div id="about">
-                        <h1>About</h1>
-                        <div class="content">A genuinely awesome, non-restrictive minecraft server. The only goal this server has is to create a fun, survival, semi-vanilla environment in which for people to play.</p>
-                    </div>
-                    <div id="starred-threads">
-                        <h1>Starred Threads</h1>
-                        <div class="content">&#060;dynamic-content-here&#062;</div>
-                    </div>
-            </div>
+$this->sidebar
         </div>
-    <script type="text/javascript" src="template.js"></script>
     </body>
 </html>
-?>
+EOT;
+        print $this->body;
+    }
+}

@@ -139,6 +139,11 @@ div#wrapper
     color: grey;
 }
 
+#nav a#current
+{
+    color: grey;
+}
+
 section#body
 {
     width: auto;
@@ -160,7 +165,8 @@ div#sidebar
 {
     float: right;
     margin-top: 0;
-    width: 25em 
+    width: 25em;
+    height: 660px;
 }
 
 div#sidebar div
