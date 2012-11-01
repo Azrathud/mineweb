@@ -5,3 +5,10 @@ index.php.back
 status.txt
 index.back.php
 forums/
+.htaccess
+400.php
+401.php
+403.php
+404.php
+500.php
+error_log
