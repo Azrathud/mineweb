@@ -29,7 +29,7 @@ while ($file = readdir($dir_handle))
 closedir($dir_handle);
 
 # Newest files first
-rsort($files);
+natcasesort($files);
 
 # Output file name as header, last modified and then the contents
 foreach($files as $file) {
