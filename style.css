@@ -50,7 +50,7 @@ div#wrapper
     color: white;
     position: relative;
     overflow:hidden;
-    width: 64em;
+    width: 49em;
     margin: auto
 }
 
@@ -167,8 +167,8 @@ div#sidebar
 {
     float: right;
     margin-top: 0;
-    width: 25em;
-    height: 660px;
+    width: 11em;
+    min-height: 200px;
 }
 
 div#sidebar div
