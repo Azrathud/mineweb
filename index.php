@@ -37,7 +37,7 @@ foreach($files as $file) {
     $last_modified = date("M j, y", $last_modified_raw);
     $content = file_get_contents("$base_dir$file");
     $post_name = str_replace("-", " ", $file);
-    $posts.="<h2>$post_name - $last_modified </h2> $content";
+    $posts.="<div class=\"post\"><h2>$post_name - $last_modified </h2> $content</div>";
 }
 
 $template->content = <<<EOT
