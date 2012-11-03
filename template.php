@@ -20,7 +20,12 @@ class Template {
 
         date_default_timezone_set("America/Denver");
         # Change this when migrating server
-        $this->root_dir = "/";
+
+        # I need to export this as a file due to having the root variable
+        #   In different environments
+        $root_dir_file= fopen("root_dir.txt");
+        $this->root_dir = fgets($root_dir_file);
+        fclose($root_dir_file);
 
         $this->title="Azrathud Minecraft Server";
         $this->content="";
