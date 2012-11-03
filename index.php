@@ -29,12 +29,13 @@ while ($file = readdir($dir_handle))
 closedir($dir_handle);
 
 # Newest files first
-natcasesort($files);
+krsort($files);
+
 
 # Output file name as header, last modified and then the contents
 foreach($files as $file) {
     $last_modified_raw = filemtime("$base_dir$file");
-    $last_modified = date("M j, y", $last_modified_raw);
+    $last_modified = date("M j,'y", $last_modified_raw);
     $content = file_get_contents("$base_dir$file");
     $post_name = str_replace("-", " ", $file);
     $posts.="<div class=\"post\"><h2>$post_name - $last_modified </h2> $content</div>";
