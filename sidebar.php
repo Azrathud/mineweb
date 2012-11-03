@@ -60,7 +60,7 @@ EOT;
         $server_status = <<<EOT
 <div id="status">
 <h1>Server Status</h1>
-<div class="content"><span style="color:$color"><b>$text</b> </span>at $ip</div>
+<div class="content"><span id="notification" style="color: $color"><b>$text</b></span> at $ip</div>
 </div>
 EOT;
         return $server_status;
