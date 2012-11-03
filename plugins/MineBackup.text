@@ -1,0 +1,2 @@
+http://dev.bukkit.org/server-mods/minebackup/
+provides hard backups of the server map over periodic intervals. This is contrasted with CoreProtect, which only records the changes. I use these backup in case something disasterous happens to the current save like corruption, etc.
