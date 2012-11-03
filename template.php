@@ -99,8 +99,7 @@ $this->content
                     </div>
                 </section>
             </div>
-            <div id="sidebar" class="box">
-$this->sidebar_output
+            $this->sidebar_output
         </div>
     </body>
 </html>
