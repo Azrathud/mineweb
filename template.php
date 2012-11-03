@@ -23,7 +23,7 @@ class Template {
 
         # I need to export this as a file due to having the root variable
         #   In different environments
-        $root_dir_file= fopen("root_dir.txt");
+        $root_dir_file= fopen("root_dir.txt", 'r');
         $this->root_dir = fgets($root_dir_file);
         fclose($root_dir_file);
 
