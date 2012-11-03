@@ -7,10 +7,10 @@ class Template {
     private $current_file;
     private $current_filename;
     private $root_dir;
+    private $sidebar_output;
+    private $sidebar;
     var $content;
     var $title;
-    var $sidebar;
-    var $sidebar_output;
 
     function __construct($sidebar){
 
