@@ -5,6 +5,7 @@ class Template {
     private $links;
     private $body;
     private $current_file;
+    private $current_filename;
     private $root_dir;
     var $content;
     var $title;
@@ -47,6 +48,10 @@ class Template {
         $parts = Explode('/', $current_file);
         $this->current_file = $parts[count($parts) -1];
 
+        # Store for later
+        $current_filename_parts= Explode('.', $this->current_file);
+        $this->current_filename= $current_filename_parts[0];
+
         # Create links. Add current link indicator
         $this->links = "";
         $link_id = "";
@@ -72,6 +77,7 @@ class Template {
         <title>$this->title</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="$this->current_filename.css" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
     </head>
     <body>
