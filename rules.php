@@ -10,6 +10,7 @@ $template->content = <<<EOT
 <h1>Rules</h1>
 <div class="content">
     <p>Please don't grief. Killing is fine in cases of conflict but pointless repeated killing or destruction of property is considering griefing.</p>
+    <p>You may only ask for a rollback in cases of bugs, server problems, or griefing.</p>
 </div>
 EOT;
 
