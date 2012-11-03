@@ -11,11 +11,10 @@ $posts="";
 
 # Read posts
 $base_dir = "posts/";
-$dir_handle = @opendir("$base_dir") or die("Unable to open current directory");
+$dir_handle = @opendir("$base_dir") or die("Unable to open $base_dir directory");
 //Loop through the files
 $files = array();
-while ($file = readdir($dir_handle))
-{
+while ($file = readdir($dir_handle)) {
     // Skip unnecessary files
     if($file == "." || $file == ".." || $file == "index.php" || substr($file, 0, 1) == ".")
     {
