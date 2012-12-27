@@ -46,6 +46,7 @@ class Template {
             "Forums" => "forums/", 
             // "Donate" => "donate.php"
             "Contact" => "contact.php", 
+            "RSS" => "feed/index.php"
         );
 
         # Grab the filename this file is being run from
@@ -110,6 +111,6 @@ $this->content
     </body>
 </html>
 EOT;
-        print $this->body;
+        return $this->body;
     }
 }
