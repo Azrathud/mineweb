@@ -10,7 +10,7 @@ $rssfeed.= '<description>Updates for the Azrathud minecraft server</description>
 $rssfeed.= '<language>en-us</language>';
 #
 # Read posts
-$base_dir = "/home1/onetwoko/public_html/minecraft/posts/";
+$base_dir = "/home1/onetwoko/public_html/minecraft/raw_posts/";
 $dir_handle = @opendir("$base_dir") or die("Unable to open $base_dir directory");
 //Loop through the files
 $files = array();
@@ -42,7 +42,7 @@ foreach($files as $file) {
     $rssfeed .= '<item>';
     $rssfeed .= '<title>' . $post_name . '</title>';
     $rssfeed .= '<description>' . $content . '</description>';
-    $rssfeed .= '<link>http://minecraft.azrathud.com/' . $file . '.php</link>';
+    $rssfeed .= '<link>http://minecraft.azrathud.com/posts/' . $file . '.php</link>';
     $rssfeed .= '<pubDate>' . $last_modified . '</pubDate>';
     $rssfeed .= '</item>';
 }

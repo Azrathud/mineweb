@@ -12,7 +12,7 @@ $template = new Template($sidebar);
 $posts="";
 
 # Read posts
-$base_dir = "/home1/onetwoko/public_html/minecraft/posts/";
+$base_dir = "/home1/onetwoko/public_html/minecraft/raw_posts/";
 $dir_handle = @opendir("$base_dir") or die("Unable to open $base_dir directory");
 //Loop through the files
 $files = array();
@@ -45,7 +45,7 @@ foreach($files as $file) {
 
     $separate_post = "<div class=\"post\"><h2>$post_name - $last_modified </h2> $content</div>";
 
-    $imagined_post_file =  $file . ".php"; # Each post should have its own link
+    $imagined_post_file =  "posts/" . $file . ".php"; # Each post should have its own link
     if(! file_exists($imagined_post_file)){
         create_file($imagined_post_file, $separate_post);
     }
