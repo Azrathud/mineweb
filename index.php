@@ -10,7 +10,7 @@ $template = new Template($sidebar);
 $posts="";
 
 # Read posts
-$base_dir = "posts/";
+$base_dir = "/home1/onetwoko/public_html/minecraft/posts/";
 $dir_handle = @opendir("$base_dir") or die("Unable to open $base_dir directory");
 //Loop through the files
 $files = array();
