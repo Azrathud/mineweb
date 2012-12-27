@@ -13,3 +13,4 @@ forums/
 error_log
 500.shtml
 *.sw*
+ip-address.txt
