@@ -84,6 +84,7 @@ class Template {
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="stylesheet" type="text/css" href="$this->current_filename.css" />
         <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="alternate" href="/feed/" title="Azrathud server RSS feed" type="application/rss+xml" />
     </head>
     <body>
         <div id="wrapper">
