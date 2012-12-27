@@ -42,7 +42,7 @@ foreach($files as $file) {
     $rssfeed .= '<item>';
     $rssfeed .= '<title>' . $post_name . '</title>';
     $rssfeed .= '<description>' . $content . '</description>';
-    $rssfeed .= '<link>http://minecraft.azrathud.com</link>';
+    $rssfeed .= '<link>http://minecraft.azrathud.com/' . $file . '.php</link>';
     $rssfeed .= '<pubDate>' . $last_modified . '</pubDate>';
     $rssfeed .= '</item>';
 }
